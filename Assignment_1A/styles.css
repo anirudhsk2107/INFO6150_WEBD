@@ -91,3 +91,10 @@
         margin: 10px;
         font-size: large;
       }
+
+      #gender{
+        height: 45px;
+        width: 510px;
+        border: 2px solid #c7470c;
+        margin: 10px;
+      }
