@@ -25,6 +25,7 @@
 *	font size have been set.
 *   Used width and height for images and Map.
 *   Text alignment has been set.
+*   Rounded borders have been used using border-radius for images, buttons & inputs.
 
 #### HTML5 Tags/controls Used:
 
@@ -38,6 +39,8 @@
 *   div
 *   button
 *   img
+*   select
+*   option
 
 #### References:
 *   https://all-thats-coffee.business.site/

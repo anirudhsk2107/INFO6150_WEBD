@@ -25,6 +25,7 @@
 *   Text alignment has been set to centre.
 *   Footer has been set in all the pages.
 *   Back button is set in all the pages to go to a previous page using button tag.
+*   Rounded borders have been used using border-radius for images & inputs.
 
 #### HTML5 Tags/controls Used:
 
