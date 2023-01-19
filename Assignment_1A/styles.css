@@ -32,6 +32,7 @@
         width: 300px;
         height: 300px;
         margin: 25px;
+        border-radius: 50%;
       }
       
       p{
@@ -53,6 +54,7 @@
         cursor: pointer;
         width: 120px;
         height: 45px;
+        border-radius: 25px;
       }
 
       table{
@@ -79,6 +81,8 @@
         height: 40px;
         width: 500px;
         border: 2px solid #c7470c;
+        border-radius: 25px;
+        padding-left: 20px;
       }
 
       #divSignUp{
@@ -94,7 +98,10 @@
 
       #gender{
         height: 45px;
-        width: 510px;
+        width: 530px;
         border: 2px solid #c7470c;
         margin: 10px;
+        border-radius: 25px;
+        padding-left: 20px;
+        padding-right: 10px;
       }
