@@ -1,3 +1,11 @@
+html, body{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+  
   body{
     background-color: #a9a9a9  ;
   }
@@ -108,7 +116,7 @@
   }
 
   #aboutparadiv figure{
-    width: 100%; 
+    width: 90%; 
     height: 100px; 
     float: left;
     display: flex;
@@ -120,14 +128,19 @@
     color: black;
     font-size: 17px;
     float:left;
-    margin-left: 10px;
+    margin-left: 20px;
     color: black;
   }
 
   .logoimg{
-    height: 100%;
-    width: auto;
+    height: 100px;
+    width: 100px;
     border-radius: 50%;
+    transition: all 0.5s ease;
+  }
+
+  .logoimg:hover {
+    transform: scale(1.2);
   }
 
   #skills{
@@ -166,3 +179,114 @@
     margin-top: 10%;
   }
   
+  .contacticon{
+    height: 25px;
+    width: 25px;
+  }
+
+  .contacticondiv{
+    display: inline-block;
+    padding-right: 1%;
+  }
+
+  .contact{
+    padding-left: 45%;
+    padding-bottom: 2%;
+    padding-top: 1%;
+    position: relative;
+  }
+
+  @media (max-width: 1100px) {
+    html, body{
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    .column{
+      width: 100%;
+      height: auto;
+    }
+
+    #anirudhimg{
+      border-radius: 50%;
+      margin: 10% 30% 0 0;
+      height: 40%;
+      width: 40%;
+    }
+
+    #topsection{
+      height: 50%;
+    }
+
+    .row{
+      display: flex;
+      flex-direction: column;
+    }
+
+    #imageAni{
+      order: 1;
+    }
+
+    #descAni{
+      order: 2;
+    }
+
+    .column h3{
+      font-size: large;
+      margin: 10% 0 0 10%;
+    }
+  
+    .column p{
+      font-size: large;
+    }
+    
+    .column h4{
+      margin: 2% 0 10% 10%;
+      font-size: large;
+    }
+
+    #aboutmepara{
+      font-size: large;
+    }
+
+    .imageaboutpage{
+      width: 300px;
+      height: 300px;
+      border-radius: 30%;
+      margin: 5% 0 0 0;
+    }
+
+    #imageaboutdiv{
+      width: 100%;
+      display: flex; 
+      align-items: center;
+      justify-content: center; 
+    }
+
+    #aboutme{
+      background-color: #ababa0;
+      height: auto;
+      color: #f8e109;
+    }
+
+    #aboutparadiv{
+      width: 100%;
+      margin-top: 5%;
+    }
+
+    #aboutparadiv figure figcaption{
+      text-align: left;
+      font-size: 20px;
+    }
+  
+    #skills .row .column{
+      display: block;
+    }
+
+    section{
+      padding-bottom: 10px;
+    }
+  }
