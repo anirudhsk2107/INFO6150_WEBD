@@ -7,15 +7,15 @@ html, body{
 }
   
   body{
-    background-color: #a9a9a9  ;
+    background-color: #F5EDCE ;
   }
 
   .top{
     align-items: center;
     display: flex;
     margin-top: 0%;
-    background-color: #008080 ;
-    border-radius: 25px 25px 0 0;
+    background-color: #89C4E1 ;
+    border-radius: 25px 25px 25px 25px;
   }
 
   #contact{
@@ -23,21 +23,23 @@ html, body{
   }
 
   .top div{
-    margin-left: 2%;
-    margin-top: 1%;
     width: 50%;
+  }
+
+  #asktext{
+    margin-left: 2%;
   }
 
   a:link,a:visited{
     text-decoration: none;
-    color: #f8e109;
+    color: #58287F;
     font-size: xx-large;
   }
 
   #topsection{
     height: 700px;
-    background-color: #008080 ;
-    border-radius: 0 0 25px 25px;
+    background-color: #F5EDCE;
+    border-radius: 25px 25px 25px 25px;
   }
 
   .column{
@@ -53,7 +55,7 @@ html, body{
   }
 
   .column h3{
-    color: white;
+    color: #1A0000;
     opacity: 0.7;
     font-size: 30px;
     margin: 20% 0 0 10%;
@@ -61,7 +63,7 @@ html, body{
 
   .column h1{
     width: 480px;
-    color: #f8e109;
+    color: #58287F;
     opacity: 0.9;
     font-size: 100px;
     margin: 5% 0 0 10%;
@@ -70,21 +72,22 @@ html, body{
   
   .column p{
     font-size: 20px;
-    color: white;
+    color: #1A0000;
     opacity: 0.7;
     margin: 2% 0 0 10%;
   }
   
   .column h4{
-    color: white;
+    color: #1A0000;
     opacity: 0.7;
     margin: 2% 0 0 10%;
   }
 
   #aboutme{
-    background-color: #ababa0;
+    background-color: #89C4E1;
     height: 700px;
-    color: #f8e109;
+    color: #58287F;
+    border-radius: 25px 25px 25px 25px;
   }
 
   .imageaboutpage{
@@ -99,7 +102,7 @@ html, body{
     margin: 0 0 0 0;
     padding-top: 2%;
     font-size: 40px;
-    color: #f8e109;
+    color: #58287F;
   }
 
   #imageaboutdiv{
@@ -145,9 +148,8 @@ html, body{
   }
 
   #skills{
-    background-color: #008080 ;
+    background-color: #F5EDCE ;
     height: 700px;
-    color: #f8e109;
     border-radius: 25px;
   }
 
@@ -197,8 +199,14 @@ html, body{
     position: relative;
   }
 
+  #certifications{
+    background-color: #89C4E1;
+    height: 500px;
+    border-radius: 25px 25px 25px 25px;
+  }
+
   footer{
-    background-color: #008080;
+    background-color: #F5EDCE;
   }
 
   #divtable, table{
@@ -229,6 +237,7 @@ html, body{
     float: right;
     margin-right: 25px;
     display: flex;
+    border: none;
   }
 
   nav ul li{
@@ -248,17 +257,6 @@ html, body{
     width: 50px;
   }
 
-
-  #menubtn{
-    display: none;
-    border-radius: 50%;
-    opacity: 0.7;
-  }
-
-  #menuimg{
-    height: 50px;
-  }
-
   @media (max-width: 1100px) {
     html, body{
       width: 100%;
@@ -270,6 +268,11 @@ html, body{
 
     header{
       height: 250px;
+    }
+
+    #asktext{
+      text-align: center;
+      margin-left: 0;
     }
 
     .column{
@@ -343,7 +346,7 @@ html, body{
     }
 
     #aboutme{
-      background-color: #ababa0;
+      background-color: #E4C988;
       height: auto;
       color: #f8e109;
     }
@@ -368,7 +371,6 @@ html, body{
 
     .top div{
       width: 100%;
-
     }
    
     nav {
@@ -378,7 +380,8 @@ html, body{
       left: 0;
       width: 100%;
       z-index: 1;
-    }
+      margin-right: 0;
+      border-top: 3px solid #58287F;    }
 
     nav ul li{
       display: block;
