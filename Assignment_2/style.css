@@ -25,6 +25,7 @@ html, body{
   .top div{
     margin-left: 2%;
     margin-top: 1%;
+    width: 50%;
   }
 
   a:link,a:visited{
@@ -98,6 +99,7 @@ html, body{
     margin: 0 0 0 0;
     padding-top: 2%;
     font-size: 40px;
+    color: #f8e109;
   }
 
   #imageaboutdiv{
@@ -124,8 +126,7 @@ html, body{
   }
 
   #aboutparadiv figure figcaption{
-    text-align: center;
-    color: black;
+    text-align: left;
     font-size: 17px;
     float:left;
     margin-left: 20px;
@@ -196,6 +197,68 @@ html, body{
     position: relative;
   }
 
+  footer{
+    background-color: #008080;
+  }
+
+  #divtable, table{
+    margin: 0 auto;
+    margin-top: 3%;
+    text-align: left;
+  }
+
+  table{
+    width: 80%;
+    height: 150px;
+    border: 2px solid #6353ca;
+    margin-bottom: 2%;
+  }
+
+  th{
+    border-bottom: 2px solid #6353ca;
+    border-right: #6353ca;
+    font-size: x-large;
+    color: #f8e109;
+  }
+
+  td{
+    font-size: large;
+  }
+
+  nav{
+    float: right;
+    margin-right: 25px;
+    display: flex;
+  }
+
+  nav ul li{
+    display: inline-block;
+  }
+
+  #topBtn {
+    position: fixed; 
+    right: 30px; 
+    bottom: 30px; 
+    border-radius: 50%;
+    opacity: 0.7;
+  }
+
+  #gototop{
+    height: 50px;
+    width: 50px;
+  }
+
+
+  #menubtn{
+    display: none;
+    border-radius: 50%;
+    opacity: 0.7;
+  }
+
+  #menuimg{
+    height: 50px;
+  }
+
   @media (max-width: 1100px) {
     html, body{
       width: 100%;
@@ -203,6 +266,10 @@ html, body{
       margin: 0;
       padding: 0;
       overflow-x: hidden;
+    }
+
+    header{
+      height: 250px;
     }
 
     .column{
@@ -232,6 +299,15 @@ html, body{
 
     #descAni{
       order: 2;
+    }
+
+    .top{
+      display: block;
+      height: inherit;
+    }
+
+    .column h1{
+      font-size: 60px;
     }
 
     .column h3{
@@ -288,5 +364,24 @@ html, body{
 
     section{
       padding-bottom: 10px;
+    }
+
+    .top div{
+      width: 100%;
+
+    }
+   
+    nav {
+      display: flex;
+      flex-direction: column;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      z-index: 1;
+    }
+
+    nav ul li{
+      display: block;
+      text-align: center;
     }
   }
