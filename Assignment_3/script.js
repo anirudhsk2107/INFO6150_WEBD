@@ -98,10 +98,71 @@ function editRow(){
 
 function deleteRow(inpt){
   var parentRow = inpt.parentElement.parentElement;
+  var dropDownDetails = inpt.parentElement.parentElement.nextElementSibling;
   document.getElementById("myTable").deleteRow(parentRow.rowIndex);
+  document.getElementById("myTable").deleteRow(dropDownDetails.rowIndex);
   alert("Row deleted successfully!");
 }
 
-function addNewRow(){
+function addNewRow(){   
+  var table = document.getElementById("myTable");
+  var tbodyRef = document.getElementsByTagName("tbody")[0];
+  var lastStudent = table.lastElementChild.lastElementChild.previousElementSibling?.firstElementChild?.nextElementSibling?.innerHTML || "Student 0";
+  var latestIndex = lastStudent.split(" ")[1];
 
+  //Creating a new ROW
+  var tdRowNode = document.createElement("tr");
+  
+  var trCheckBoxCell = document.createElement("td");
+  trCheckBoxCell.innerHTML =
+    '<input type="checkbox" onclick="checkedBox(this);" id="checkbox' + (parseInt(latestIndex) + 1) + '"/><br /><br /><img src="down.png" width="25px" onclick="additionalDetails(this);"/>';
+  
+  var trStudentCell = document.createElement("td");
+  trStudentCell.innerHTML = "Student " + (parseInt(latestIndex) + 1);
+  
+  var trTeacherCell = document.createElement("td");
+  trTeacherCell.innerHTML = "Teacher " + (parseInt(latestIndex) + 1);
+  
+  var trAwardCell = document.createElement("td");
+  trAwardCell.innerHTML = "Approved";
+
+  var trSemesterCell = document.createElement("td");
+  trSemesterCell.innerHTML = "Fall";
+
+  var trTypeCell = document.createElement("td");
+  trTypeCell.innerHTML = "TA";
+
+  var trBudgetCell = document.createElement("td");
+  var budget = (parseInt(latestIndex) + 1)*10000 + (parseInt(latestIndex) + 2)*1000 + (parseInt(latestIndex) + 3)*100 
+             + (parseInt(latestIndex) + 4)*10 + (parseInt(latestIndex) + 5);
+  trBudgetCell.innerHTML = budget;
+
+  console.log(trBudgetCell);
+
+  var trpercntCell = document.createElement("td");
+  trpercntCell.innerHTML = "100%";
+
+  tdRowNode.appendChild(trCheckBoxCell);
+  tdRowNode.appendChild(trStudentCell);
+  tdRowNode.appendChild(trTeacherCell);
+  tdRowNode.appendChild(trAwardCell);
+  tdRowNode.appendChild(trSemesterCell);
+  tdRowNode.appendChild(trTypeCell);
+  tdRowNode.appendChild(trBudgetCell);
+  tdRowNode.appendChild(trpercntCell);
+
+  //Creating a new Dropdown row 
+  var tdDropDownNode = document.createElement("tr");
+  tdDropDownNode.setAttribute('class', 'dropDownTextArea');
+  tdDropDownNode.style.display = 'none';
+
+  var dropDownHtml = document.createElement("td");
+  dropDownHtml.colSpan = 8;
+  dropDownHtml.innerHTML = 'Advisor:<br /><br /> Award Details<br /> Summer 1-2014(TA)<br /> Budget Number: <br /> Tuition Number: <br /> Comments:<br /><br /><br /> Award Status:<br /><br /><br />';
+  
+  tdDropDownNode.appendChild(dropDownHtml);
+
+  //Appending to the table
+  tbodyRef.appendChild(tdRowNode);
+  tbodyRef.appendChild(tdDropDownNode);
 }
