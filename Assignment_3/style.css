@@ -21,3 +21,8 @@ body {
 .socialmediaicons{
 	text-align: center;
 }
+
+button#button:disabled {
+	background-color: #666;
+	border:2px solid #666;
+}
