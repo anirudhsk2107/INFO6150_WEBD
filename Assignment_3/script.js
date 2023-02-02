@@ -98,10 +98,31 @@ function editRow(){
 
 function deleteRow(inpt){
   var parentRow = inpt.parentElement.parentElement;
+  var tbl = parentRow.parentElement;
+  var headerRow = tbl.firstElementChild;
+  var parentRow = inpt.parentElement.parentElement;
   var dropDownDetails = inpt.parentElement.parentElement.nextElementSibling;
+  var flag = false;
+  
   document.getElementById("myTable").deleteRow(parentRow.rowIndex);
   document.getElementById("myTable").deleteRow(dropDownDetails.rowIndex);
+  
   alert("Row deleted successfully!");
+  
+  var checkboxes = document.getElementsByTagName('input');
+  for (let i = 0; i < checkboxes.length; i++){
+    if(document.getElementById(checkboxes[i].id).checked == true)
+      flag = true;
+  }
+  
+  if(flag)
+    document.getElementById("button").disabled = false;
+  else{
+    document.getElementById("button").disabled = true;
+
+    headerRow.deleteCell(9);
+    headerRow.deleteCell(8);
+  }
 }
 
 function addNewRow(){   
@@ -165,4 +186,5 @@ function addNewRow(){
   //Appending to the table
   tbodyRef.appendChild(tdRowNode);
   tbodyRef.appendChild(tdDropDownNode);
+  alert("A new student has been added successfully.");
 }
