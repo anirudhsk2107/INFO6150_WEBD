@@ -142,7 +142,6 @@ function submitted(e){
      
     if (validFirstName && validLastName && validEmail && validPhone && validZipCode){	
         var formData = new FormData(form);
-        console.log(formData)
         var feedback = document.getElementById("feedback").value === "select"?"":document.getElementById("feedback").value;
 
         switch(feedback){
@@ -165,20 +164,6 @@ function submitted(e){
                 feedback = "";
                 break;
         }
-
-
-        var div = document.getElementById("whyDiv");
-        var checkboxes = div.querySelectorAll("input[type='checkbox']");
-        var checkedBox = '';
-        for(i=0;i<checkboxes.length;i++){
-            if(checkboxes[i].checked)
-                checkedBox = checkboxes[i].value;
-        }
-        var reasonForWhy = document.getElementById("reasonForWhy").value;
-
-        // formData.feedback = feedback;
-        // formData.why = checkedBox;
-        // formData.reasonForWhy = reasonForWhy;
 
         var sourcevar = '';
         for(i=0; i<cbSource.length; i++){
