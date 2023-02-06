@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <title>Feedback</title>
+  <style>
+    label {	float: left;
+			width: 150px;}
+      #container{
+          width: 700px;
+          margin: auto;
+          background-color: beige;
+      } 
+      main{
+          padding: 50px;
+      }
+  </style>
+ </head>
+ <body>
+ <div id="container">
+	 
+	 <main>
+	 <h2>Feeback</h2>
+	 <h3>Love something? Hate something? Let us know!</h3>
+		 Note : Fields marked with an asterisk(*) are mandatory
+		 <br><br>
+		 <form method="post" id="myForm">
+			<label>Title*:</label>
+			<input type="radio" name="title" id="Miss" value="miss" required="required"/>Miss
+			<input type="radio" name="title" id="Mr" value="mr" required="required"/>Mr.
+			<input type="radio" name="title" id="Mrs" value="mrs" required="required"/>Mrs.
+			<br><br>
+			<label for="firstName">First Name*:</label>
+			<input type="text" name="firstName" id="firstName" placeholder="First Name" required/>	
+			<br><br>
+			<div id="error_firstName" style="display: none; color: red;">
+                Invalid First Name, Please enter valid first name
+                <br><br>
+            </div>
+			
+			<label for="lastName">Last Name*:</label>
+			<input type="text" name="lastName" id="lastName" placeholder="Last Name" required/>
+			<br><br>
+			<div id="error_lastName" style="display: none; color: red;">
+                Invalid Last Name, Please enter valid Last name
+                <br><br>
+            </div>
+
+			<label for="emailId">Email Id*:</label>
+			<input type="text" name="emailId" id="emailId" placeholder="yourname@domain.com" required/>
+			<br><br>
+			<div id="error_emailId" style="display: none; color: red;">
+                Invalid Email ID, Please enter valid ID ending with @northeastern.edu
+                <br><br>
+            </div>
+			
+			<label for="phoneNumber">Phone Number*:</label>
+			<input type="text" name="phoneNumber" id="phoneNumber" placeholder="xxx-xxx-xxxx" required/>
+			<br><br>
+			<div id="error_phoneNumber" style="display: none; color: red;">
+                Invalid Phone Number, Phone number can only be numeric
+                <br><br>
+            </div>
+
+			<label for="streetAddress1">Street Address 1*:</label>
+			<input type="text" name="streetAddress1" id="streetAddress1" placeholder="address" required/>
+			<br><br>
+
+			<label for="streetAddress2">Street Address 2:</label>
+			<input type="text" name="streetAddress2" id="streetAddress2" placeholder="address" />
+			<br><br>
+
+			<label for="city">City*:</label>
+			<input type="text" name="city" id="city" placeholder="city" required/>
+			<br><br>
+
+			<label for="state">State*:</label>
+			<input type="text" name="state" id="state" placeholder="state" required/>
+			<br><br>
+			
+            <label for="zipcode">ZipCode*:</label>
+			<input type="text" name="zipcode" id="zipcode" placeholder="xxxxxx" required/>
+			<br><br>
+			<div id="error_zipcode" style="display: none; color: red;">
+                Invalid Zip Code, Zip code can only be numeric
+                <br><br>
+            </div>
+             
+            <label for="howDidYouHear" id="howDidYouHear">How did you hear*:</label>
+			<input type='checkbox' name="source" value="Facebook" onclick="howDidyouHearCheckBox(this)"/> Facebook
+            <input type='checkbox' name="source" value="Google" onclick="howDidyouHearCheckBox(this)"/> Google
+            <input type='checkbox' name="source" value="Yelp" onclick="howDidyouHearCheckBox(this)"/> Yelp
+			<br><br>
+             
+			<label for="comments">Comments*:</label>
+			<textarea name="text" id="comments" placeholder="Your comments" rows="5" cols="25" required></textarea>
+			<br><br>
+
+			<label for="custFeedback">How was the product:</label>
+			<select name="feedback" id="feedback" onchange="dropDownChange(this.value)">
+				<option value=""> -- Select -- </option>
+				<option value="excellent">Excellent</option>
+				<option value="verygood">Very Good</option>
+				<option value="good">Good</option>
+				<option value="bad">Bad</option>
+				<option value="verybad">Very Bad</option>
+			</select>
+			<br><br>
+
+			<div id="whyDiv">
+				<label for="why" id="whylbl">Why:</label><br>
+				<div id="excellent"><input type='checkbox' name="reason" value="Loved it!" onclick="checkboxClicked(this)"/> Loved it!</div>
+				<div id="verygood"><input type='checkbox' name="reason" value="Worked well" onclick="checkboxClicked(this)"/> Worked well</div>
+            	<div id="good"><input type='checkbox' name="reason" value="Liked it" onclick="checkboxClicked(this)"/> Liked it</div>
+            	<div id="bad"><input type='checkbox' name="reason" value="Damaged Product" onclick="checkboxClicked(this)"/> Damaged Product</div>
+				<div id="verybad"><input type='checkbox' name="reason" value="Was not what I expected" onclick="checkboxClicked(this)"/> Was not what I expected</div>
+				<br><br>
+			</div>
+
+			<div id="reasonForWhyDiv">
+				<label for="reasonForWhy">Tell us why you did/did not like it*:</label>
+				<input type="text" name="reasonForWhy" id="reasonForWhy" placeholder="Tell Us Why" />
+				<br><br>
+				<br><br>
+			</div>
+
+			<input type="Submit" id="submitForm">
+			<input type="Reset" id="resetForm">
+			<br><br>
+		 </form>
+	 </main>
+ </div>
+
+ <script src="Form.js">
+ </script>
+
+ </body>
+</html>
