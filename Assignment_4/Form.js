@@ -133,6 +133,7 @@ function checkboxClicked(chkbox){
     else{
         document.getElementById("reasonForWhyDiv").style.display='none';
         document.getElementById("reasonForWhy").required = false;
+        document.getElementById("reasonForWhy").value = "";
     }
 }
 
