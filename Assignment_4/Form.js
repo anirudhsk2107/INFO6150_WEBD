@@ -181,7 +181,7 @@ function submitted(e){
         var resetbtn = document.querySelector("#resetForm");
         resetbtn.click();
         dropDownChange('');
-        window.location.href = "Details.html";
+        addNewRow();
     }
     else{
         alert("Some fields require your attention.");
@@ -210,4 +210,76 @@ function howDidyouHearCheckBox(cb){
             }
         }
     }
+}
+
+function addNewRow(){
+    var formData = JSON.parse(localStorage.getItem("formData"));
+    var tbodyRef = document.getElementsByTagName("tbody")[0];
+    debugger;
+
+    // Creating a new row 
+    var tdRowNode = document.createElement("tr");
+  
+    var trTitleCell = document.createElement("td");
+    trTitleCell.innerHTML = formData.title;
+
+    var trFirstNAme = document.createElement("td");
+    trFirstNAme.innerHTML = formData.firstName;
+
+    var trLastName = document.createElement("td");
+    trLastName.innerHTML = formData.lastName;
+
+    var trEmailId = document.createElement("td");
+    trEmailId.innerHTML = formData.emailId;
+
+    var trPhoneNo = document.createElement("td");
+    trPhoneNo.innerHTML = formData.phoneNumber;
+
+    var trStreetAdd1 = document.createElement("td");
+    trStreetAdd1.innerHTML = formData.streetAddress1;
+
+    var trStreetAdd2 = document.createElement("td");
+    trStreetAdd2.innerHTML = formData.streetAddress2;
+
+    var trCity = document.createElement("td");
+    trCity.innerHTML = formData.city;
+
+    var trState = document.createElement("td");
+    trState.innerHTML = formData.state;
+
+    var trZipCode = document.createElement("td");
+    trZipCode.innerHTML = formData.zipcode;
+
+    var trSource = document.createElement("td");
+    trSource.innerHTML = formData.source;
+
+    var trComment = document.createElement("td");
+    trComment.innerHTML = formData.text;
+
+    var trFeedback = document.createElement("td");
+    trFeedback.innerHTML = formData.feedback;
+
+    var trReason = document.createElement("td");
+    trReason.innerHTML = formData.reason == undefined ? '': formData.reason;
+
+    var trReasonForWhy = document.createElement("td");
+    trReasonForWhy.innerHTML = formData.reasonForWhy;
+
+    tdRowNode.appendChild(trTitleCell);
+    tdRowNode.appendChild(trFirstNAme);
+    tdRowNode.appendChild(trLastName);
+    tdRowNode.appendChild(trEmailId);
+    tdRowNode.appendChild(trPhoneNo);
+    tdRowNode.appendChild(trStreetAdd1);
+    tdRowNode.appendChild(trStreetAdd2);
+    tdRowNode.appendChild(trCity);
+    tdRowNode.appendChild(trState);
+    tdRowNode.appendChild(trZipCode);
+    tdRowNode.appendChild(trSource);
+    tdRowNode.appendChild(trComment);
+    tdRowNode.appendChild(trFeedback);
+    tdRowNode.appendChild(trReason);
+    tdRowNode.appendChild(trReasonForWhy);
+
+    tbodyRef.appendChild(tdRowNode);
 }
