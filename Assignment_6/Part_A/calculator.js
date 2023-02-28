@@ -1,16 +1,8 @@
+var isNumber = false;
+
 $(document).ready(function() {
     welcome();
-
-    $('#input1').on('input', function() {
-      var numOnly = $(this).val().replace(/[^0-9]/g, '');
-      $(this).val(numOnly);
-    });
-
-    $('#input2').on('input', function() {
-        var numOnly = $(this).val().replace(/[^0-9]/g, '');
-        $(this).val(numOnly);
-    });
-
+    inputValidation();
     add();
     subtract();
     multiply();
@@ -22,31 +14,73 @@ function welcome(){
     $('#welcomeHead').html('Hi' + ' ' + username + '!');
 }
 
+function inputValidation(){
+    $('input[name="number"]').blur(() => {
+        var elementId = event.target.id;
+        $('#' + elementId + 'Error').html("");
+        var regExNo = /^-?\d*\.?\d+$/; 
+        var inputNo = $("#" + elementId).val();
+        
+        if (regExNo.test(inputNo)) {
+            $('#' + elementId + 'Error').append("");
+        } else {
+            $('#' + elementId + 'Error').append("Input should be a number");
+            isNumber = false;
+        }
+
+        isNumber = ($('#input1Error').html() == "" && $('#input2Error').html() == "") ? true : false;
+        console.log(isNumber);
+    });
+}
+
 function add(){
     $('#add').click(() => {
-        var input1 = parseFloat($("#input1").val());
-        var input2 = parseFloat($("#input1").val());
-        $('#output').val(parseFloat(input1+input2));
+        if(isNumber){
+            var input1 = parseFloat($("#input1").val());
+            var input2 = parseFloat($("#input2").val());
+            $('#output').val(parseFloat(input1+input2));
+        } else {
+            alert('Please enter numbers only in the input field.');
+            $('#output').val("");
+        }
     });
 }
+
 function subtract(){
     $('#subtract').click(() => {
-        var input1 = parseFloat($("#input1").val());
-        var input2 = parseFloat($("#input1").val());
-        $('#output').val(parseFloat(input1-input2));        
+        if(isNumber){
+            var input1 = parseFloat($("#input1").val());
+            var input2 = parseFloat($("#input2").val());
+            $('#output').val(parseFloat(input1-input2));        
+        } else {
+            alert('Please enter numbers only in the input field.');
+            $('#output').val("");
+        }
     });
 }
+
 function multiply(){
     $('#multiply').click(() => {
-        var input1 = parseFloat($("#input1").val());
-        var input2 = parseFloat($("#input1").val());
-        $('#output').val(parseFloat(input1*input2));        
+        if(isNumber){
+            var input1 = parseFloat($("#input1").val());
+            var input2 = parseFloat($("#input2").val());
+            $('#output').val(parseFloat(input1*input2));        
+        } else {
+            alert('Please enter numbers only in the input field.');
+            $('#output').val("");
+        }
     });
 }
+
 function divide(){
     $('#divide').click(() => {
-        var input1 = parseFloat($("#input1").val());
-        var input2 = parseFloat($("#input1").val());
-        $('#output').val(parseFloat(input1/input2));        
+        if (isNumber) {
+            var input1 = parseFloat($("#input1").val());
+            var input2 = parseFloat($("#input2").val());
+            $('#output').val(parseFloat(input1/input2));   
+        } else {
+            alert('Please enter numbers only in the input field.');
+            $('#output').val("");
+        }     
     });
 }
