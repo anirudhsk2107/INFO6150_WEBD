@@ -1,55 +1,45 @@
 $(document).ready(function(){
 	var timer = null; 
-    var flag = true;
-	var hours = 0, minutes = 0, seconds = 0; 
+	var hrs = 0, mins = 0, sec = 0; 
 
 	function displayTime() { 
-        var hoursString = (hours < 10 ? "0" : "") + hours.toString();
-        var minutesString = (minutes < 10 ? "0" : "") + minutes.toString();
-        var secondsString = (seconds < 10 ? "0" : "") + seconds.toString();
+        var hoursString = (hrs < 10 ? "0" : "") + hrs.toString();
+        var minutesString = (mins < 10 ? "0" : "") + mins.toString();
+        var secondsString = (sec < 10 ? "0" : "") + sec.toString();
         $("#timer").text(hoursString + ":" + minutesString + ":" + secondsString);
 	}
 
-	async function startTimer() { 
-		while (flag) {
-			await new Promise(resolve => setTimeout(resolve, 1000)); 
-			seconds++; 
-			if (seconds == 60) { 
-				seconds = 0;
-				minutes++;
+	const startTimer = async () => {
+		if (timer !== null) 
+			return;
+
+		timer = setInterval(async () => {
+		  sec++;
+		  if (sec >= 60) {
+			sec = 0;
+			mins++;
+			if (mins >= 60) {
+			  mins = 0;
+			  hrs++;
 			}
-			if (minutes == 60) { 
-				minutes = 0;
-				hours++;
-			}
-			displayTime();
-		}
-	}
+		  }
+		  displayTime();
+		}, 1000);
+	  };
 
-	$("#start").click(function(){ 
-		if (!timer) { 
-			timer = setInterval(startTimer, 1000); 
-            flag = true;
-		}
-	});
-
-	$("#stop").click(function(){ 
-		if (timer) {
-			clearInterval(timer); 
-			timer = null; 
-            flag = false;
-		}
-	});
-
-	$("#reset").click(function(){ 
-		hours = 0;
-		minutes = 0;
-		seconds = 0;
-        displayTime();
-		if (timer) { 
-			clearInterval(timer);
-			timer = null; 
-            flag = true;
-		}
-	});
+	  $("#start").click(() => {
+		startTimer();
+	  });
+	
+	  $("#stop").click(() => {
+		clearInterval(timer);
+		timer = null;
+	  });
+	
+	  $("#reset").click(() => {
+		clearInterval(timer);
+		timer = null;
+		hrs = mins = sec = 0;
+		displayTime();
+	  });
 });
