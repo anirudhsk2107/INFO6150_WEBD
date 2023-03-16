@@ -1,0 +1,25 @@
+#hero {
+    max-width: 1500px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 3%;
+    border: 2px solid $black-clr;
+    border-radius: 25px;
+    background-color: $bg-light;
+}
+
+p {
+    margin: 0 5%;
+}
+
+h1{
+    font-family:serif
+}
+
+#about a {
+    border: 1px solid black;
+    border-radius: 25px;
+    padding: 1%;
+    background-color: lightblue;
+    text-decoration: none;
+}

@@ -1,0 +1,24 @@
+#destinations {
+    display: inline;
+    justify-content: space-between;
+    height: auto;
+}
+
+$items: 2;
+@for $i from 1 through $items {
+    .destination-Row-#{$i} {        
+        display: flex;
+        justify-content: center;
+        margin: 5%;
+        .destination-child {
+            width: 33%;
+        }
+
+        .destination-child .destination-images img {
+            height: 250px;
+            width: 250px;
+            border-radius: 25%;
+        }
+
+    }
+}

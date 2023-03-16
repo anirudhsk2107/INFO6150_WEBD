@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Travel Website</title>
+    <link rel="icon" href="/Images/favicon.png" type="image/x-icon"S>
+    <link rel="stylesheet" href="/css/main.css">
+  </head>
+  <body>
+    <div class="navbarDiv">
+      <img src="/Images/TravelLogo.png" class="travelLogo">
+      <div class="divMenu">
+          <a href="#hero" class="navbarLinks">Home</a>
+          <a href="#divBooking" class="navbarLinks">Booking</a>
+          <a href="#destinations" class="navbarLinks">Destinations</a>
+          <a href="#contact" class="navbarLinks">Contact</a>
+      </div>
+      <label class="switch">
+        <input type="checkbox" id="dark-mode-toggle">
+        <span class="slider round"></span>
+      </label>
+    </div>
+
+
+    <main id="hero">
+      
+      <div id="topHeader">
+        <img class="image_logo" src="Images/TravelLogo.png" alt="Travel logo">
+        <h1>TRAVEL AND EXPLORE</h1>
+        <p>
+          Welcome to our travel page! Our goal is to take you on a virtual journey around the world and share some of the most incredible destinations we have visited. 
+          From bustling cities to tranquil beaches, we have something for everyone. 
+          We hope to inspire you to explore new places, experience different cultures, and create unforgettable memories. 
+          So sit back, relax, and let us take you on a journey you won't forget!
+        </p>
+      </div>
+<!--
+       <div id="intro">
+      </div> -->
+
+      <div id="divBooking">
+      <section id="about">
+        <h2>DISCOVER THE WORLD</h2>
+        <p>Find your dream destination and start planning your next adventure</p><br><br>
+        <a href="/Table.html" class="btn">Best Travel Destinations</a>
+      </section>
+      
+      <section id="booking">
+        <form method="get" action="requestData.html">
+          <div class="form-flex">
+              <div class="form-items-1">
+                  <label for="destination">Where do you want to go (required)</label><br>
+                  <input type="text" id="destination" name="destination" required>
+              </div>
+              <div class="form-items-2">
+                  <label for="checkin" class="inputLabel">Check in:</label><br>
+                  <input type="date" id="checkin" name="checkin" min="2022-09-17">
+              </div>
+              <div class="form-items-3">
+                  <label for="checkout" class="inputLabel1">Check out:</label><br>
+                  <input type="date" id="checkout" name="checkout" max="2024-09-18">
+              </div>
+              <div class="form-items-4">
+                  <input type="submit" value="Go" class="goButton">
+              </div>
+          </div>
+        </form>
+      </section>
+      </div>
+      <section id="destinations" class="destinations-Div">
+        <div class="heading">
+            <h1>RECOMMENDED DESTINATIONS</h1>
+        </div>
+        <div class="destination-Row-1">
+            <div class="destination-child">
+                <div class="destination-images">
+                    <img src="/Images/singapore.png" />
+                </div>
+                <h2>Singapore</h2>
+                <p>Singapore, officially the Republic of Singapore, is a sovereign island city</p>
+                <div class="flex-container-destinations">
+                    <div>
+                        <div class="small-image-container">
+                            <img src="/Images/hotel-icon.png">
+                            <img src="/Images/dine-icon.png">
+                            <img src="/Images/flight-icon.png">
+                        </div>
+                        <p class="singapore-para">1000 Kms</p>
+                    </div>
+                    <div>
+                        <h2>$38,800</h2>
+                        <p>Aprrox 2 nights trip</p>
+                    </div>
+                </div>
+            </div>
+            <div class="destination-child">
+                <div class="destination-images">
+                    <img src="/Images/thailand.png">
+                </div>
+                <h2>Thailand</h2>
+                <p>Thailand is a Southeast Asian country known for tropical beaches.</p>
+                <div class="flex-container-destinations">
+                    <div>
+                        <div>
+                            <img src="/Images/hotel-icon.png">
+                            <img src="/Images/dine-icon.png">
+                            <img src="/Images/flight-icon.png">
+                        </div>
+                        <p>1000 Kms</p>
+                    </div>
+
+                    <div>
+                        <h2>$38,800</h2>
+                        <p>Aprrox 2 nights trip</p>
+                    </div>
+                </div>
+            </div>
+            <div class="destination-child">
+                <div class="destination-images">
+                    <img src="/Images/Paris.png">
+                </div>
+                <h2>Paris</h2>
+                <p>Paris is France's capital and is a major European city</p>
+                <div class="flex-container-destinations">
+                    <div>
+                        <div>
+                            <img src="/Images/hotel-icon.png">
+                            <img src="/Images/dine-icon.png">
+                            <img src="/Images/flight-icon.png">
+                        </div>
+                        <p>1000 Kms</p>
+                    </div>
+
+                    <div>
+                        <h2>$38,800</h2>
+                        <p>Aprrox 2 nights trip</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="destination-Row-2">
+            <div class="destination-child">
+                <div class="destination-images">
+                    <img src="/Images/new-zealand.png">
+                </div>
+                <h2>New Zealand</h2>
+                <p>New Zealand is an island country in southwest Pacific</p>
+                <div class="flex-container-destinations">
+                    <div>
+                        <div>
+                            <img src="/Images/hotel-icon.png">
+                            <img src="/Images/dine-icon.png">
+                            <img src="/Images/flight-icon.png">
+                        </div>
+                        <p>1000 Kms</p>
+                    </div>
+
+                    <div>
+                        <h2>$38,800</h2>
+                        <p>Aprrox 2 nights trip</p>
+                    </div>
+                </div>
+            </div>
+            <div class="destination-child">
+                <div class="destination-images">
+                    <img src="/Images/bora-bora.png">
+                </div>
+                <h2>Bora Bora</h2>
+                <p>Bora Bora is a small South Pacific island northwest of Tahiti</p>
+                <div class="flex-container-destinations">
+                    <div>
+                        <div>
+                            <img src="/Images/hotel-icon.png">
+                            <img src="/Images/dine-icon.png">
+                            <img src="/Images/flight-icon.png">
+                        </div>
+                        <p>1000 Kms</p>
+                    </div>
+
+                    <div>
+                        <h2>$38,800</h2>
+                        <p>Aprrox 2 nights trip</p>
+                    </div>
+                </div>
+            </div>
+            <div class="destination-child">
+                <div class="destination-images">
+                    <img src="/Images/singapore.png">
+                </div>
+                <h2>London</h2>
+                <p>London is capital of England and United Kingdom</p>
+                <div class="flex-container-destinations">
+                    <div>
+                        <div>
+                            <img src="/Images/hotel-icon.png">
+                            <img src="/Images/dine-icon.png">
+                            <img src="/Images/flight-icon.png">
+                        </div>
+                        <p>1000 Kms</p>
+                    </div>
+
+                    <div>
+                        <h2>$38,800</h2>
+                        <p>Aprrox 2 nights trip</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+    
+      <footer>
+        <div class="contactUs"><P>CONTACT US</p><br></div>
+        <div id="contact">
+          <div class="contacticondiv"><a href="tel:123-456-7890" target="_blank"><img src="/Images/call.png" alt="contact number" class="contacticon"></a></div>
+          <div class="contacticondiv"><a href="mailto:sampathkumar.an@northeastern.edu"><img src="/Images/gmail.png" alt="email id" class="contacticon"></a></div>
+          <div class="contacticondiv"><a href="https://www.linkedin.com/" target="_blank"><img src="/Images/linkedin.png" alt="Linkedin" class="contacticon"></a></div>  
+          <button id="topBtn"><a href="#topHeader"><img src="/Images/top.png" alt="Go To Top" id="gototop"></a></button>
+        </div>
+    </footer>
+    
+    </main>    
+    <script src="script.js"></script>
+  </body> 
+</html>

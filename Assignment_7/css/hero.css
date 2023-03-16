@@ -1,0 +1,17 @@
+#hero {
+  max-width: 1500px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 3%;
+  border: 2px solid black;
+  border-radius: 25px;
+  background-color: #F6F1F1;
+}
+
+p {
+  margin: 0 5%;
+}
+
+h1 {
+  font-family: serif;
+}/*# sourceMappingURL=hero.css.map */

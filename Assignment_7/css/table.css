@@ -1,0 +1,27 @@
+#topHeader {
+  padding: 25px;
+}
+
+#divTable {
+  padding: 5%;
+}
+#divTable table {
+  width: 80%;
+  margin: auto;
+}
+#divTable table:hover {
+  transform: scale(1.2);
+}
+
+.bordered-table {
+  border-collapse: collapse;
+  border: 1px solid black;
+  border-radius: inherit;
+}
+
+.bordered-table th,
+.bordered-table td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+}/*# sourceMappingURL=table.css.map */

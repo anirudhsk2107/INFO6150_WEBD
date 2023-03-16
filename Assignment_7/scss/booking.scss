@@ -1,0 +1,39 @@
+#divBooking{
+    background-image: url('/Images/lalo-hernandez-Amo081zdJsI-unsplash.png');
+    background-size: 1499px 500px;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+.form-flex{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid black;
+    // opacity: 0.8;
+    border-radius: 25px;
+}
+
+$items: 4;
+@for $i from 1 through $items {
+    .form-items-#{$i} {
+        align-items: center;
+        padding: 20px;
+        width: 20%;
+
+        input {
+            border-radius: 25px;
+            margin-top: 10px;
+            width: 70%;
+            height: 50%;
+            border: 1px solid black;
+            margin: 10px 0px 10px 0px;
+        }
+    }
+}
+
+.goButton {
+    height: 70%;
+}
