@@ -1,0 +1,40 @@
+@mixin flex-box-space {
+    display: flex;
+    justify-content: center;
+}
+
+.navbarDiv {
+    @include flex-box-space;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: $bg-nav-color;
+    height: 50px;
+    align-items: center;
+    z-index: 1000;
+    opacity: 1;
+    
+    a{
+        text-decoration: none;
+        color: black;
+        font-size: 20px;
+        padding: 12px;
+
+        &:hover{
+            background-color: $gb-nav-hover;
+        }
+
+        &:visited{
+            text-decoration: none;
+        }
+    }
+}
+
+.travelLogo {
+    height: 100%;
+    margin: 10px;
+}
+
+.navbarLinks{
+    margin: 10px;
+}

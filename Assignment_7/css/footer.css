@@ -1,0 +1,26 @@
+footer {
+  background-color: #97DEFF;
+  padding: 25px;
+  border-radius: inherit;
+}
+
+.contacticondiv {
+  display: inline-block;
+  padding-right: 1%;
+}
+.contacticondiv .contacticon {
+  height: 25px;
+  width: 25px;
+}
+
+#topBtn {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  border-radius: 50%;
+  opacity: 0.7;
+}
+#topBtn img {
+  height: 50px;
+  width: 50px;
+}/*# sourceMappingURL=footer.css.map */

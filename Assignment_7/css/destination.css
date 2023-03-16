@@ -1,0 +1,33 @@
+#destinations {
+  display: inline;
+  justify-content: space-between;
+  height: auto;
+}
+
+.destination-Row-1 {
+  display: flex;
+  justify-content: center;
+  margin: 5%;
+}
+.destination-Row-1 .destination-child {
+  width: 33%;
+}
+.destination-Row-1 .destination-child .destination-images img {
+  height: 250px;
+  width: 250px;
+  border-radius: 25%;
+}
+
+.destination-Row-2 {
+  display: flex;
+  justify-content: center;
+  margin: 5%;
+}
+.destination-Row-2 .destination-child {
+  width: 33%;
+}
+.destination-Row-2 .destination-child .destination-images img {
+  height: 250px;
+  width: 250px;
+  border-radius: 25%;
+}/*# sourceMappingURL=destination.css.map */

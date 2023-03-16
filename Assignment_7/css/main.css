@@ -1,0 +1,331 @@
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-bottom: 0px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #fff;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+[data-theme=light] html, [data-theme=light] body {
+  background-color: #95BDFF;
+  color: black;
+}
+[data-theme=light] .navbarDiv {
+  background-color: #95BDFF;
+  color: black;
+}
+[data-theme=light] .navbarDiv a:hover {
+  background-color: #E5D1FA;
+}
+[data-theme=light] #hero {
+  background-color: #F6F1F1;
+}
+
+[data-theme=dark] html, [data-theme=dark] body {
+  background-color: #1B2430;
+  color: #ffffff;
+}
+[data-theme=dark] .navbarDiv {
+  background-color: #1B2430;
+  color: #ffffff;
+}
+[data-theme=dark] .navbarDiv:hover {
+  background-color: rgb(71, 71, 71);
+}
+[data-theme=dark] #hero {
+  background-color: #51557E;
+}
+
+.navbarDiv {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #95BDFF;
+  height: 50px;
+  align-items: center;
+  z-index: 1000;
+  opacity: 1;
+}
+.navbarDiv a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  padding: 12px;
+}
+.navbarDiv a:hover {
+  background-color: #E5D1FA;
+}
+.navbarDiv a:visited {
+  text-decoration: none;
+}
+
+.travelLogo {
+  height: 100%;
+  margin: 10px;
+}
+
+.navbarLinks {
+  margin: 10px;
+}
+
+#hero {
+  max-width: 1500px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 3%;
+  border: 2px solid black;
+  border-radius: 25px;
+  background-color: #F6F1F1;
+}
+
+p {
+  margin: 0 5%;
+}
+
+h1 {
+  font-family: serif;
+}
+
+#about a {
+  border: 1px solid black;
+  border-radius: 25px;
+  padding: 1%;
+  background-color: lightblue;
+  text-decoration: none;
+}
+
+#divBooking {
+  background-image: url("/Images/lalo-hernandez-Amo081zdJsI-unsplash.png");
+  background-size: 1499px 500px;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 10px;
+  border-radius: 25px;
+}
+
+.form-flex {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid black;
+  border-radius: 25px;
+}
+
+.form-items-1 {
+  align-items: center;
+  padding: 20px;
+  width: 20%;
+}
+.form-items-1 input {
+  border-radius: 25px;
+  margin-top: 10px;
+  width: 70%;
+  height: 50%;
+  border: 1px solid black;
+  margin: 10px 0px 10px 0px;
+}
+
+.form-items-2 {
+  align-items: center;
+  padding: 20px;
+  width: 20%;
+}
+.form-items-2 input {
+  border-radius: 25px;
+  margin-top: 10px;
+  width: 70%;
+  height: 50%;
+  border: 1px solid black;
+  margin: 10px 0px 10px 0px;
+}
+
+.form-items-3 {
+  align-items: center;
+  padding: 20px;
+  width: 20%;
+}
+.form-items-3 input {
+  border-radius: 25px;
+  margin-top: 10px;
+  width: 70%;
+  height: 50%;
+  border: 1px solid black;
+  margin: 10px 0px 10px 0px;
+}
+
+.form-items-4 {
+  align-items: center;
+  padding: 20px;
+  width: 20%;
+}
+.form-items-4 input {
+  border-radius: 25px;
+  margin-top: 10px;
+  width: 70%;
+  height: 50%;
+  border: 1px solid black;
+  margin: 10px 0px 10px 0px;
+}
+
+.goButton {
+  height: 70%;
+}
+
+#destinations {
+  display: inline;
+  justify-content: space-between;
+  height: auto;
+}
+
+.destination-Row-1 {
+  display: flex;
+  justify-content: center;
+  margin: 5%;
+}
+.destination-Row-1 .destination-child {
+  width: 33%;
+}
+.destination-Row-1 .destination-child .destination-images img {
+  height: 250px;
+  width: 250px;
+  border-radius: 25%;
+}
+
+.destination-Row-2 {
+  display: flex;
+  justify-content: center;
+  margin: 5%;
+}
+.destination-Row-2 .destination-child {
+  width: 33%;
+}
+.destination-Row-2 .destination-child .destination-images img {
+  height: 250px;
+  width: 250px;
+  border-radius: 25%;
+}
+
+footer {
+  background-color: #97DEFF;
+  padding: 25px;
+  border-radius: inherit;
+}
+
+.contacticondiv {
+  display: inline-block;
+  padding-right: 1%;
+}
+.contacticondiv .contacticon {
+  height: 25px;
+  width: 25px;
+}
+
+#topBtn {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  border-radius: 50%;
+  opacity: 0.7;
+}
+#topBtn img {
+  height: 50px;
+  width: 50px;
+}
+
+#topHeader {
+  padding: 25px;
+}
+
+#divTable {
+  padding: 5%;
+}
+#divTable table {
+  width: 80%;
+  margin: auto;
+}
+#divTable table:hover {
+  transform: scale(1.2);
+}
+
+.bordered-table {
+  border-collapse: collapse;
+  border: 1px solid black;
+  border-radius: inherit;
+}
+
+.bordered-table th,
+.bordered-table td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: #95BDFF;
+}
+@media (prefers-color-scheme: dark) {
+  html, body {
+    background-color: #1B2430;
+    color: #ffffff;
+  }
+  html #hero, body #hero {
+    background-color: #51557E;
+  }
+}
+
+section {
+  margin: 3%;
+}/*# sourceMappingURL=main.css.map */

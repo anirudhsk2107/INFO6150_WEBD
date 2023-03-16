@@ -1,0 +1,76 @@
+#divBooking {
+  background-image: url("/Images/lalo-hernandez-Amo081zdJsI-unsplash.png");
+  background-size: 1499px 500px;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 10px;
+  border-radius: 25px;
+}
+
+.form-flex {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid black;
+  border-radius: 25px;
+}
+
+.form-items-1 {
+  align-items: center;
+  padding: 20px;
+  width: 20%;
+}
+.form-items-1 input {
+  border-radius: 25px;
+  margin-top: 10px;
+  width: 70%;
+  height: 50%;
+  border: 1px solid black;
+  margin: 10px 0px 10px 0px;
+}
+
+.form-items-2 {
+  align-items: center;
+  padding: 20px;
+  width: 20%;
+}
+.form-items-2 input {
+  border-radius: 25px;
+  margin-top: 10px;
+  width: 70%;
+  height: 50%;
+  border: 1px solid black;
+  margin: 10px 0px 10px 0px;
+}
+
+.form-items-3 {
+  align-items: center;
+  padding: 20px;
+  width: 20%;
+}
+.form-items-3 input {
+  border-radius: 25px;
+  margin-top: 10px;
+  width: 70%;
+  height: 50%;
+  border: 1px solid black;
+  margin: 10px 0px 10px 0px;
+}
+
+.form-items-4 {
+  align-items: center;
+  padding: 20px;
+  width: 20%;
+}
+.form-items-4 input {
+  border-radius: 25px;
+  margin-top: 10px;
+  width: 70%;
+  height: 50%;
+  border: 1px solid black;
+  margin: 10px 0px 10px 0px;
+}
+
+.goButton {
+  height: 70%;
+}/*# sourceMappingURL=booking.css.map */
