@@ -63,7 +63,8 @@ module.exports = function (app) {
         });
       }
 
-      var userResult = await User.create({ "fullname": fullname, "email": email, "password": password });
+      var hashedPassword = await bcrypt.hash(password, 10);
+      var userResult = await User.create({ "fullname": fullname, "email": email, "password": hashedPassword });
 
       console.log(userResult);
       res.send(userResult);
