@@ -1,0 +1,322 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+#Jobscard{
+  height:1000px;
+  width: 500px;
+  margin: 30px;
+  margin-bottom: 2rem;
+}
+.navbar1{
+  background-color:black;
+  display:inline-block;
+  width:1280px;
+  color: White;
+  text-decoration: None;
+  font-size:17px;
+  margin-top:5px;
+  }
+
+  ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display:inline-block;
+    padding:15px;
+    margin-right:220px;
+    text-decoration:None;
+    
+}
+
+.nav1{
+  color:white;
+  font-size:medium;
+  font-size:17px;
+  text-decoration: None;
+  margin-left:50px;
+  margin-right:120px;
+  float:left;
+}
+
+.homeimage{
+height:500px;
+}
+
+#Jobsimage1{
+  width:500;
+  height: 500px;
+
+}
+#contacttext{
+  font-size: 20px;
+  margin-left:300px;
+  margin-top:200px;
+}
+
+#button{
+  width:300px;
+}
+.fields{
+  width:300px;
+}
+#form{
+  margin-left:450px;
+  margin-top:200px;
+  
+ 
+}
+#Jobsimage3{
+  height:690px;
+  
+}
+
+#card{
+ background-color:gold;
+}
+#travel{
+  margin-left:25px;
+  margin-right:25px;
+  display:flex;
+  padding:10px;
+ 
+  
+}
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.navbar1{
+  width:100%;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.App {
+  display: flex;
+  justify-content: center;
+  margin-top: 10rem;
+  margin-right:400px;
+ 
+}
+input {
+  display: block;
+  width: 20rem;
+  height: 2rem;
+  padding: 1rem;
+  font-size: 1.1em;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+button {
+  border: black;
+  padding: 1rem;
+  width: 20rem;
+  font-size: 1.2em;
+  border-radius: 0.2rem;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #c5c5c5;
+}
+
+#navContainer{
+  justify-content: center;
+}
+
+
+.image_logo{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  max-width: 500px;
+  max-height: 500px;
+}
+
+h1{
+  text-align: center;
+  font-size: 60px;
+  color: #c7470c;
+}
+
+.gallery{
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+  margin-top: 100px;
+}
+
+.gallery_head, h2{
+  text-align: center;
+  color: #c7470c;
+  font-size: 30px;
+}
+
+.gallery_img{
+  display: inline-block;
+  width: 300px;
+  height: 300px;
+  margin: 25px;
+  border-radius: 50%;
+}
+
+p{
+  font-size: large;
+}
+
+.centre{
+  margin: 0 auto;
+  display: block;
+}
+
+button{
+  background-color: #c7470c;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  cursor: pointer;
+  width: 120px;
+  height: 45px;
+  border-radius: 25px;
+}
+
+table{
+  border: 1px solid black;
+  border-collapse: collapse;
+  height: 150px;
+  width: 700px;
+  margin-left: auto; 
+  margin-right: auto;
+}
+
+th, td{        
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding-left: 5px;
+}
+
+.details{
+  text-align: left;
+  border: none;
+}
+
+input{
+  height: 40px;
+  width: 500px;
+  border: 2px solid #c7470c;
+  border-radius: 25px;
+  padding-left: 20px;
+}
+
+#divSignUp{
+  max-width: 500px;
+  display: block;
+  margin: 0 auto;
+}
+
+.formip, label{
+  margin: 10px;
+  font-size: large;
+}
+
+#gender{
+  height: 45px;
+  width: 530px;
+  border: 2px solid #c7470c;
+  margin: 10px;
+  border-radius: 25px;
+  padding-left: 20px;
+  padding-right: 10px;
+}
+
+/* ___________________________________ */
+.Card {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+
+.Card:hover {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  transform: translateY(-5px);
+}
+
+.navbar1 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.navbar1 li {
+  color: #444;
+  font-size: 1.2rem;
+  font-weight: bold;
+  list-style: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+.navbar1 ul:first-child li {
+  margin-bottom: 1rem;
+}
+
+#section {
+  font-size: 0.8rem;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+
+#navContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.nav1 {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+#Jobscard img {
+  height: 300px;
+  object-fit: cover;
+}
