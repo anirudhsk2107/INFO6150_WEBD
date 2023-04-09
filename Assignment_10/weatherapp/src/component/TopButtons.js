@@ -11,7 +11,7 @@ function TopButtons() {
   }, cities.map(function (city) {
     return React.createElement("button", {
       key: city.id,
-      className: "text-white text-lg font-medium"
+      className: "text-white text-5xl font-medium font-size"
     }, city.title);
   }));
 }

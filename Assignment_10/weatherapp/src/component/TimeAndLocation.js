@@ -6,8 +6,7 @@ function TimeAndLocation({weather: {city}}) {
     const month = now.toLocaleString('default', { month: 'long' });
     const day = now.getDate();
     const year = now.getFullYear();
-    const time = now.toLocaleTimeString();
-    const dateTimeString = `${month} ${day} ${year} | Time: ${time}`;
+    const dateTimeString = `${month} ${day} ${year}`;
     console.log(dateTimeString);
 
     return (

@@ -2,16 +2,11 @@ const API_KEY = '05fc4f6ce8119188896b5448edeb0cfb';
 const URL_BASE = 'https://api.openweathermap.org/data/2.5';
 
 const getWeatherData = (infoType, searchParams) => {
-    // const url = new URL(URL_BASE + '/' + infoType + '?zip=' + searchParams.zip + ',us&appid=' + API_KEY);
-    // url.search; //= new URLSearchParams({ ...searchParams, appid: API_KEY});
     
     const url = new URL(URL_BASE + '/' + infoType);
     url.searchParams.append('zip', searchParams.zip + ',us');
     url.searchParams.append('appid', API_KEY);
     url.searchParams.append('units', 'imperial');
-    
-    console.log("URL: ", url);
-
 
     return fetch(url)
         .then((res) => res.json());
@@ -42,9 +37,6 @@ const iconUrlFromCode = (code) => `http://openweathermap.org/img/wn/${code}@2x.p
 
 const  getFormattedWeatherData = async (searchParams)  => {
     const formattedCurrentWeather = await getWeatherData('forecast', searchParams).then(formatForecastWeather);
-    
-    console.log("getFormattedWeatherData DATA: ", formattedCurrentWeather);
-
     return formattedCurrentWeather ;
 }
 

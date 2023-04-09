@@ -1,18 +1,14 @@
 import React from 'react';
-import Cloud from './images/cloudy.png';
-import Rain from './images/rainy.png';
-import Snow from './images/snow.png';
-import Sunny from './images/sunny.png';
 import { iconUrlFromCode } from "../services/weatherService";
-import { Link } from 'react-router-dom';
 
-function Forecast({title, items}) {
+function Forecast({title, items, setSelectedDate}) {
     
     const filteredItems = [];
     let lastDay = null;
     let daysShown = 0;
   
     for (let i = 0; i < items.length && daysShown < 5; i++) {
+
       const item = items[i];
       const date = new Date(item.date);
       const day = date.getDate();
@@ -24,7 +20,10 @@ function Forecast({title, items}) {
       }
     }
 
-  
+    const OnBtnClick = (date) => {
+        setSelectedDate(date);
+    }
+
     return (
       <div>
         <div className='flex items-center justify-start mt-6'>
@@ -40,7 +39,7 @@ function Forecast({title, items}) {
                 {formatDate(item.date)}
               </p>
               <img src={iconUrlFromCode(item.icon)} className='w-12 my-1'/>
-            <button className='font-medium' >{`${item.temp.toFixed()}°`}F</button>
+                <button className='font-medium' onClick={()=>OnBtnClick(item.date)} >{`${item.temp.toFixed()}°`}F</button>
               
             </div>
           ))}
@@ -48,13 +47,13 @@ function Forecast({title, items}) {
       </div>
     );
 }
-  
+
 const formatDate = (dateVal) => {
-    console.log(dateVal);
+
     const dateStr = dateVal;
     const date = new Date(dateStr);
     const dayOfWeek = new Intl.DateTimeFormat('en-US', { weekday: 'short' }).format(date);
-    console.log(dayOfWeek);
+
     return dayOfWeek;
 }
 
